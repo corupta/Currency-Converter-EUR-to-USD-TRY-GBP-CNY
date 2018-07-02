@@ -1,0 +1,20 @@
+That's a qt project, and I did not used qt designer.
+So, I've always compiled the program on terminal.
+
+To be practical, I created the below script line to compile and run the project automatically.
+
+qmake -project && echo "QT += network" >> Currency-Converter.pro && qmake Currency-Converter.pro && make && ./Currency-Converter
+
+Add a '&' in the end to open the program in the background (not connected to terminal)
+
+the line "QT += network" had to be appended on the .pro file, in order to use QNetworkAccessManager (to connect to and fetch data from api.fixer.io)
+
+
+Program can be rebuild with that command, if interested.
+
+The required files for that purpose are below:
+
+main.cpp
+currencyConverter.h and currencyConverter.cpp
+currencyButton.h and currencyButton.cpp
+rateReader.h and rateReader.cpp
