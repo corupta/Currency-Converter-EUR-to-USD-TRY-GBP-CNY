@@ -5,7 +5,7 @@
 That's a project I've created as a university homework for the course, CMPE 230 - Systems Programming on Dec 20th, 2017.
 
 Basically, that's a QT project that fetches data from fixer.io and shows converts the given TRY amount to USD/EUR/GBP/CNY.
-However, since the fixer.io api has changed and the free plan only supports base as EUR, I updated the project to convert from EUR to USD/TRY/GBP/CNY.
+However, since the fixer.io api has changed and the free plan only supports base as EUR, so I updated the project to convert from EUR to USD/TRY/GBP/CNY instead.
 
 What the project is about can be found via [Project.pdf](https://github.com/corupta/Currency-Converter-EUR-to-USD-TRY-GBP-CNY/blob/master/Project.pdf)
 
