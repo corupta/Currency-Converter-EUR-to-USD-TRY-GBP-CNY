@@ -33,10 +33,10 @@ CurrencyConverter::CurrencyConverter(QWidget *parent) : QObject(parent) {
 	inputRow -> addStretch();
 	inputRow -> addWidget(inputSlider);
 	inputRow -> addWidget(inputNumber);
-	inputRow -> addWidget(createLabel("TL", Qt::AlignLeft));
+	inputRow -> addWidget(createLabel("EUR", Qt::AlignLeft));
 
 	QVBoxLayout *leftLayout = new QVBoxLayout;
-	leftLayout -> addWidget(createLabel("TL :", Qt::AlignCenter, leftSize));
+	leftLayout -> addWidget(createLabel("EUR :", Qt::AlignCenter, leftSize));
 	leftLayout -> addWidget(createLabel("Rate :", Qt::AlignCenter, leftSize));
 	leftLayout -> addWidget(createLabel("Amount :", Qt::AlignCenter, leftSize));
 
@@ -89,7 +89,7 @@ void CurrencyConverter::calculateResult() {
 	double currRate = myReader -> getRate(currentCurrency);
 	double convertedAmount = currRate * tryAmount;
 	QString currencyName = myReader -> getCurrencyName(currentCurrency);
-	QString rateResult = QString("%1").arg(currRate, 0, 'f') + " TL/" + currencyName;
+	QString rateResult = QString("%1").arg(currRate, 0, 'f') + " EUR/" + currencyName;
 	QString amountResult = QString("%1").arg(convertedAmount, 0, 'f', 2) + " " + currencyName;
 	rateNumber -> setText(rateResult);
 	amountNumber -> setText(amountResult);

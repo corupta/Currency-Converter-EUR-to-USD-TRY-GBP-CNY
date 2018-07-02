@@ -3,7 +3,7 @@
 
 // a qpushbutton class that recieves the width, currency type and currency name
 // instead of the classic clicked signal, it gives a signal with the currency type of the button
-// currency type is an enum that is either of USD/EUR/GBP/CNY
+// currency type is an enum that is either of USD/TRY/GBP/CNY
 // currency name is its string representation
 class CurrencyButton : public QPushButton {
 	Q_OBJECT

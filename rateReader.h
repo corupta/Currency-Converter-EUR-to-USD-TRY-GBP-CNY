@@ -18,9 +18,9 @@ class RateReader : public QObject {
 		// so that both api.fixer.io's servers and this program would need less internet connection & work faster.
 		// (good for fixer.io and they have specifically wanted such usage by telling "Please cache results whenever possible.")
 		RateReader();
-		// a function that returns the rate for a given currency type (USD/EUR/GBP/CNY)
+		// a function that returns the rate for a given currency type (USD/TRY/GBP/CNY)
 		double getRate(CurrencyType);
-		// returns the name of a given currency type (USD/EUR/GBP/CNY) as a string (USD -> "USD", etc.)
+		// returns the name of a given currency type (USD/TRY/GBP/CNY) as a string (USD -> "USD", etc.)
 		QString getCurrencyName(CurrencyType currency);
 		// true until the connection & getting rates from api.fixer.io is completed.
 		bool connecting;
@@ -31,12 +31,12 @@ class RateReader : public QObject {
 
 	private slots:
 		// called when the network connection finished with a reply (api.fixer.io)
-		// extract USD, EUR, GBP, CNY rates from the json reply, using regexes.
+		// extract USD, TRY, GBP, CNY rates from the json reply, using regexes.
 		void replyFinished(QNetworkReply *reply);
 
 	private:
-		// an array to store fetched rates for currencies (USD/EUR/GBP/CNY)
-		// note that CurrencyType is an enum where USD=0, EUR=1, GBP=2, CNY=3
+		// an array to store fetched rates for currencies (USD/TRY/GBP/CNY)
+		// note that CurrencyType is an enum where USD=0, TRY=1, GBP=2, CNY=3
 		double rates[4];
 		// NetworkAccessManager used to communicate via api.fixer.io
 		QNetworkAccessManager *manager;

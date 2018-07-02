@@ -9,7 +9,7 @@ class CurrencyConverter : public QObject {
 private:
 	// current / last entered amount in turkish liras - default is 0
 	double tryAmount;
-	// current / last chosen currency type (an enum either of USD/EUR/GBP/CNY) - default is USD
+	// current / last chosen currency type (an enum either of USD/TRY/GBP/CNY) - default is USD
 	CurrencyType currentCurrency;
 
 	// a class to get exchange rates for try from the api.fixer.io
@@ -24,8 +24,8 @@ private:
 	// amountnumber is the tryAmount converted to the chosen currency type from turkish liras
 	QLabel *rateNumber, *amountNumber;
 
-	// the four buttons in buttom (USD/EUR/GBP/CNY)
-	// since currency type is an enum of 0=USD, 1=EUR, 2=GBP, 3=CNY
+	// the four buttons in buttom (USD/TRY/GBP/CNY)
+	// since currency type is an enum of 0=USD, 1=TRY, 2=GBP, 3=CNY
 	// button[USD] is the button with the label USD
 	CurrencyButton* buttons[4];
 
