@@ -5,8 +5,9 @@
 That's a project I've created as a university homework for the course, CMPE 230 - Systems Programming on Dec 20th, 2017.
 
 Basically, that's a QT project that fetches data from fixer.io and shows converts the given TRY amount to USD/EUR/GBP/CNY.
+However, since the fixer.io api has changed and the free plan only supports base as EUR, I updated the project to convert from EUR to USD/TRY/GBP/CNY.
 
-What the project is about can be found via [Project.pdf](https://github.com/corupta/Currency-Converter-TRY-to-USD-EUR-GBP-CNY/blob/master/Project.pdf)
+What the project is about can be found via [Project.pdf](https://github.com/corupta/Currency-Converter-EUR-to-USD-TRY-GBP-CNY/blob/master/Project.pdf)
 
 That's a qt project, and I did not used qt designer.
 QT4+ is supported. (Lower versions may also support but are not tested.)
@@ -37,4 +38,4 @@ rateReader.h and rateReader.cpp
 
 Just double click on the Currency-Converter to run.
 
-For more details about how to use the project, check out [Report-Documentation.pdf](https://github.com/corupta/Currency-Converter-TRY-to-USD-EUR-GBP-CNY/blob/master/Report-Documentation.pdf)
+For more details about how to use the project, check out [Report-Documentation.pdf](https://github.com/corupta/Currency-Converter-EUR-to-USD-TRY-GBP-CNY/blob/master/Report-Documentation.pdf)
