@@ -14,7 +14,7 @@ Program can be rebuild with that command, if interested.
 
 The required files for that purpose are below:
 
-main.cpp
+main.cpp defs.h
 currencyConverter.h and currencyConverter.cpp
 currencyButton.h and currencyButton.cpp
 rateReader.h and rateReader.cpp
